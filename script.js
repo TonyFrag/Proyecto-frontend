@@ -1,8 +1,5 @@
 console.log("JS funcionando...");
 
-/* ============================
-   VALIDACIÓN FORMULARIO
-============================ */
 const form = document.querySelector("form");
 
 if (form) {
@@ -70,9 +67,6 @@ function validarCampo(input) {
 }
 
 
-/* ============================
-   CARRITO (UNIFICADO)
-============================ */
 document.addEventListener("DOMContentLoaded", () => {
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
