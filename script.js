@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* === RENDER DEL CARRITO en carrito.html === */
     const contenedor = document.querySelector("#carrito-lista");
     const totalPrecio = document.querySelector("#total-precio");
     const btnVaciar = document.querySelector("#btn-vaciar");

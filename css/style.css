@@ -19,10 +19,6 @@ body {
     min-height: 100vh;
 }
 
-/* --------------------- */
-/* HEADER */
-/* --------------------- */
-
 .header {
     background-color: black;
     display: flex;
@@ -72,10 +68,6 @@ body {
     transition: 0.3s;
 }
 
-/* --------------------- */
-/* FOOTER */
-/* --------------------- */
-
 .footer {
     background-color: black;
     padding: 2rem;
@@ -90,10 +82,6 @@ body {
     display: flex;
     gap: 2rem;
 }
-
-/* --------------------- */
-/* MAIN */
-/* --------------------- */
 
 main {
     width: 90%;
@@ -115,10 +103,6 @@ main h1 {
     margin-bottom: 2rem;
     width: 80%;
 }
-
-/* --------------------- */
-/* PRODUCTOS */
-/* --------------------- */
 
 .productos-home h2 {
     text-align: center;
@@ -166,7 +150,6 @@ main h1 {
     cursor: pointer;
 }
 
-/* BOTÓN AGREGAR AL CARRITO */
 .btn-carrito {
     width: 100%;
     padding: 1rem 2rem;
@@ -188,10 +171,6 @@ main h1 {
     transform: scale(1.05);
     box-shadow: 0 0 12px gold;
 }
-
-/* --------------------- */
-/* CONTACTO */
-/* --------------------- */
 
 .seccion-contacto {
     width: 90%;
@@ -233,7 +212,6 @@ main h1 {
     font-size: 1.8rem;
 }
 
-/* Validaciones */
 .input-error {
     border: 2px solid red !important;
     background-color: rgba(255, 255, 255, 0.41);
@@ -250,7 +228,6 @@ main h1 {
     margin-top: 0.5rem;
 }
 
-/* Submit */
 button[type="submit"] {
     padding: 1rem;
     background-color: gold;
@@ -266,10 +243,6 @@ button[type="submit"]:hover {
     background-color: rgb(255, 215, 0);
     transform: scale(1.05);
 }
-
-/* --------------------- */
-/* CARRITO */
-/* --------------------- */
 
 .carrito-container {
     width: 90%;
@@ -344,10 +317,6 @@ button[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-/* --------------------- */
-/* RESEÑAS */
-/* --------------------- */
-
 .reseñas {
     width: 90%;
     max-width: 1200px;
@@ -394,10 +363,6 @@ button[type="submit"]:hover {
     color: #555;
 }
 
-/* --------------------- */
-/* RESPONSIVE */
-/* --------------------- */
-
 @media (max-width: 768px) {
     main h1 {
         font-size: 5rem;
@@ -415,3 +380,4 @@ button[type="submit"]:hover {
         font-size: 2rem;
     }
 }
+
