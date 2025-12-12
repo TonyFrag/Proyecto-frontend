@@ -1,12 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    /* Para que 1 rem = 10px */
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
@@ -15,65 +14,72 @@ body {
     line-height: 1.5;
     background-color: rgb(44, 130, 156);
     color: white;
-
     display: flex;
     flex-direction: column;
-
     min-height: 100vh;
 }
 
-.header {
-    background-color: rgb(0, 0, 0);
+/* --------------------- */
+/* HEADER */
+/* --------------------- */
 
+.header {
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__logo{
+.header__logo {
     font-size: 3rem;
     font-weight: bold;
-
     padding: 1rem;
     margin-left: 2rem;
 }
 
-.header__logo a{
+.header__logo a {
     color: gold;
     text-decoration: none;
 }
 
-.header nav{
+.header nav {
     padding: 1rem;
     margin-right: 2rem;
 }
 
-.header nav ul{
+.header nav ul {
     list-style: none;
-
     display: flex;
-    justify-content: center;
     gap: 2rem;
 }
 
-.header__nav li{
+.header__nav li {
     font-size: 3rem;
     font-weight: bold;
 }
 
-.header__nav a{
+.header__nav a {
     color: gold;
     text-decoration: none;
     display: inline-block;
     padding: 1rem;
 }
 
+.header__nav a:hover {
+    color: white;
+    background-color: gold;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+/* --------------------- */
+/* FOOTER */
+/* --------------------- */
+
 .footer {
     background-color: black;
-
     padding: 2rem;
     color: gold;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,24 +87,24 @@ body {
 
 .footer nav ul {
     list-style: none;
-
     display: flex;
-    justify-content: center;
     gap: 2rem;
 }
 
-main{
+/* --------------------- */
+/* MAIN */
+/* --------------------- */
+
+main {
     width: 90%;
     flex: 1;
-
     margin: 2rem auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main h1{
+main h1 {
     font-size: 8rem;
     margin: 2rem 0;
 }
@@ -110,14 +116,17 @@ main h1{
     width: 80%;
 }
 
-.productos-home h2{
+/* --------------------- */
+/* PRODUCTOS */
+/* --------------------- */
+
+.productos-home h2 {
     text-align: center;
     font-size: 5rem;
-    padding: 1rem;
     margin: 3rem;
 }
 
-.contenedor-tarjetas{
+.contenedor-tarjetas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -129,17 +138,17 @@ main h1{
     padding: 1rem;
     border-radius: 1rem;
     width: 30rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 1rem;
 }
 
 .tarjeta-producto img {
     width: 100%;
     border-radius: 0.5rem;
+    height: 250px;
+    object-fit: cover;
 }
 
 .tarjeta-producto h3 {
@@ -151,36 +160,38 @@ main h1{
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    main h1 {
-        font-size: 5rem;
-    }
-
-    .productos-home h2 {
-        font-size: 3.5rem;
-    }
-
-    .tarjeta-producto {
-        width: 90%;
-    }
-
-    .header__nav li {
-        font-size: 2rem;
-    }
-}
-
-.header__nav a:hover {
-    color: white;
-    background-color: gold;
-    border-radius: 0.5rem;
-    transition: 0.3s;
-}
-
 .tarjeta-producto:hover {
     transform: scale(1.05);
     transition: 0.3s;
     cursor: pointer;
 }
+
+/* BOTÓN AGREGAR AL CARRITO */
+.btn-carrito {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: gold;
+    border: 2px solid gold;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-carrito:hover {
+    background-color: gold;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px gold;
+}
+
+/* --------------------- */
+/* CONTACTO */
+/* --------------------- */
 
 .seccion-contacto {
     width: 90%;
@@ -222,6 +233,24 @@ main h1{
     font-size: 1.8rem;
 }
 
+/* Validaciones */
+.input-error {
+    border: 2px solid red !important;
+    background-color: rgba(255, 255, 255, 0.41);
+}
+
+.input-ok {
+    border: 2px solid green !important;
+    background-color: white;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+
+/* Submit */
 button[type="submit"] {
     padding: 1rem;
     background-color: gold;
@@ -230,10 +259,159 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.5rem;
+    transition: 0.2s;
 }
 
 button[type="submit"]:hover {
     background-color: rgb(255, 215, 0);
     transform: scale(1.05);
+}
+
+/* --------------------- */
+/* CARRITO */
+/* --------------------- */
+
+.carrito-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: black;
+    border-radius: 1rem;
+    color: gold;
+}
+
+.carrito-container h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.carrito-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(30, 30, 30);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+}
+
+.btn-eliminar {
+    background: crimson;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
     transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+    background: rgb(200, 0, 40);
+    transform: scale(1.05);
+}
+
+.total-carrito {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.btn-vaciar {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background: gold;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+}
+
+.btn-vaciar:hover {
+    background: rgb(255, 215, 0);
+    transform: scale(1.05);
+}
+
+/* --------------------- */
+/* RESEÑAS */
+/* --------------------- */
+
+.reseñas {
+    width: 90%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    text-align: center;
+    padding: 20px;
+    color: gold;
+}
+
+.reseñas h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.grid-reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item-reseña {
+    background: black;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.item-reseña:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.item-reseña p {
+    font-size: 2.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.item-reseña span {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --------------------- */
+/* RESPONSIVE */
+/* --------------------- */
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 5rem;
+    }
+
+    .productos-home h2 {
+        font-size: 3.5rem;
+    }
+
+    .tarjeta-producto {
+        width: 90%;
+    }
+
+    .header__nav li {
+        font-size: 2rem;
+    }
 }

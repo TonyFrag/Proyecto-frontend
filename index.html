@@ -23,6 +23,9 @@
                 <li>
                     <a href="./pages/contacto.html">Contacto</a>
                 </li>
+                <li>
+                    <a href="./pages/carrito.html">Carrito</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,31 +39,55 @@
             <h2>Algunos de nuestros productos</h2>
 
             <div class="contenedor-tarjetas">
-                <article class="tarjeta-producto">
+                <article class="tarjeta-producto" data-nombre="FragPunk" data-precio="0">
                     <img src="./img/fragpunk.png" alt="Portada FragPunk">
                     <h3>FragPunk</h3>
-                    <p>$0</p>
+                    <p>$10</p>
+                    <button class="btn-carrito" aria-label="Agregar FragPunk al carrito">Agregar al carrito</button>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="tarjeta-producto" data-nombre="Kismet" data-precio="10">
                     <img src="./img/kismet.png" alt="Personaje Kismet">
                     <h3>Kismet</h3>
                     <p>$10</p>
+                    <button class="btn-carrito" aria-label="Agregar Kismet al carrito">Agregar al carrito</button>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="tarjeta-producto" data-nombre="Nitro" data-precio="10">
                     <img src="./img/nitro.png" alt="Personaje Nitro">
                     <h3>Nitro</h3>
                     <p>$10</p>
+                    <button class="btn-carrito" aria-label="Agregar Nitro al carrito">Agregar al carrito</button>
                 </article>
 
-                <article class="tarjeta-producto">
+                <article class="tarjeta-producto" data-nombre="Spider" data-precio="10">
                     <img src="./img/spider.png" alt="Personaje Spider">
                     <h3>Spider</h3>
                     <p>$10</p>
+                    <button class="btn-carrito" aria-label="Agregar Spider al carrito">Agregar al carrito</button>
                 </article>
             </div>
         </section>
+        <section class="reseñas">
+    <h2>Opiniones de clientes</h2>
+
+    <div class="grid-reseñas">
+        <article class="item-reseña">
+            <p>"Todo salio de 10"</p>
+            <span>- Marito</span>
+        </article>
+
+        <article class="item-reseña">
+            <p>"Exelente atencion"</p>
+            <span>- Joaqui</span>
+        </article>
+
+        <article class="item-reseña">
+            <p>"La mejor pagina de FragPunk"</p>
+            <span>- El Bananero</span>
+        </article>
+    </div>
+</section>
     </main>
     <footer class="footer">
         <p>Esta pagina la diseño Maxi</p>
